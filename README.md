@@ -1,4 +1,6 @@
 <img width="1080" height="1350" alt="PIXEL PET PLANNER" src="https://github.com/user-attachments/assets/f566bb37-f144-4bf9-86c8-5da2b7cbcb37" />
+
+
 # Pixel Pet Planner
 
 Pixel Pet Planner is a colorful to-do list web app written with a Python standard-library backend and a pixel-art HTML/CSS/JavaScript frontend. The user logs into a 2D flip phone, opens today's to-do list, and keeps a pixel cat happy by completing tasks.
