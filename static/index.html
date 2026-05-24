@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pixel Pet Planner</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <section id="login-screen" class="login-stage" aria-label="Flip phone login">
+      <div class="phone phone-login">
+        <div class="phone-top">
+          <div class="speaker"></div>
+          <div class="mini-screen">
+            <p class="signal">PIXEL PET</p>
+            <h1>Planner</h1>
+            <p class="screen-line">Log in to wake your task cat.</p>
+          </div>
+        </div>
+        <div class="hinge"></div>
+        <form id="login-form" class="phone-bottom">
+          <label for="name-input">Name</label>
+          <input
+            id="name-input"
+            name="name"
+            type="text"
+            maxlength="32"
+            placeholder="Student name"
+            autocomplete="name"
+          />
+          <button type="submit" class="primary-button">Open Phone</button>
+          <div class="keypad" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <main id="app-screen" class="app-shell hidden">
+      <section class="planner-phone" aria-label="To-do flip phone">
+        <div class="phone-top open-phone-top">
+          <div class="status-bar">
+            <span id="welcome-name">Welcome</span>
+            <span id="today-label">Today</span>
+          </div>
+          <div class="goal-panel">
+            <p class="label-text">Daily feeding goal</p>
+            <div id="goal-track" class="goal-track" aria-label="Cat feeding progress"></div>
+            <p id="goal-copy" class="goal-copy">Complete 5 tasks to fill the bowl.</p>
+          </div>
+        </div>
+
+        <div class="hinge"></div>
+
+        <section class="phone-bottom app-panel">
+          <form id="task-form" class="task-form">
+            <label for="task-input">New task</label>
+            <div class="task-entry">
+              <input
+                id="task-input"
+                type="text"
+                maxlength="90"
+                placeholder="Add today's task"
+                autocomplete="off"
+              />
+              <button type="submit" class="add-button" aria-label="Add task">+</button>
+            </div>
+          </form>
+
+          <div class="task-header">
+            <h2>Today's List</h2>
+            <button id="clear-completed" class="small-button" type="button">Clear Done</button>
+          </div>
+
+          <ul id="task-list" class="task-list" aria-live="polite"></ul>
+          <p id="empty-state" class="empty-state">Add a task to place the first snack in the bowl.</p>
+
+          <div class="phone-actions">
+            <button id="refresh-button" class="small-button" type="button">Refresh</button>
+            <button id="logout-button" class="small-button" type="button">Log Out</button>
+          </div>
+        </section>
+      </section>
+
+      <aside class="cat-yard" aria-label="Interactive cat companion">
+        <div class="cat-sign">
+          <p class="label-text">Cat status</p>
+          <h2 id="cat-name">Ready</h2>
+          <p id="cat-message">The cat is waiting for your first task.</p>
+        </div>
+        <div class="pixel-scene">
+          <div id="cat-sprite" class="pixel-cat" aria-hidden="true"></div>
+          <div class="bowl-wrap">
+            <div class="bowl">
+              <div id="bowl-fill" class="bowl-fill"></div>
+            </div>
+            <span id="bowl-label">0%</span>
+          </div>
+          <div class="grass-row" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="cat-stats">
+          <div>
+            <span class="stat-number" id="completed-count">0</span>
+            <span class="stat-label">done</span>
+          </div>
+          <div>
+            <span class="stat-number" id="pending-count">0</span>
+            <span class="stat-label">waiting</span>
+          </div>
+          <div>
+            <span class="stat-number" id="energy-count">0</span>
+            <span class="stat-label">energy</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

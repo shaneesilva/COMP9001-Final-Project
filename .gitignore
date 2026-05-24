@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+data/pixel_pet_tasks.json
+data/*.tmp
