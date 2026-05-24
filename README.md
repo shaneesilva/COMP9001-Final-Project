@@ -13,6 +13,8 @@ The 2D Pixel assets were found by me online, and has been credited at the end of
 
 ## How to Run
 
+Unzip folder and navigate to directory, either set up virtual env or run locally:
+
 ```bash
 python3 main.py
 ```
